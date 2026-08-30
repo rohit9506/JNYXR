@@ -2167,3 +2167,476 @@ section {
         height: 280px;
     }
 }
+
+
+/* ==========================================================================
+   MOBILE-ONLY FINAL ALIGNMENT FIX
+   Desktop styles remain completely unchanged.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       FOUNDER SECTION
+       Align all content to LEFT
+       ========================= */
+
+    .founder-editorial-left {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .founder-editorial-bio {
+        text-align: left;
+    }
+
+    .founder-editorial-bio p {
+        text-align: left;
+    }
+
+    .founder-editorial-footer {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+
+    .founder-editorial-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+
+
+    /* =========================
+       CONTACT SECTION
+       Label LEFT — Link RIGHT
+       ========================= */
+
+    .contact-editorial-left {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .contact-editorial-desc {
+        text-align: left;
+    }
+
+    .contact-links-grid {
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .contact-link-row {
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+
+    .contact-link-label {
+        text-align: left;
+    }
+
+    .contact-editorial-link {
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+
+    /* =========================
+       FEATURED WORK / PROJECTS
+       Text LEFT aligned
+       ========================= */
+
+    .projects-header-grid {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .projects-header-grid h2,
+    .projects-header-grid p {
+        text-align: left;
+    }
+
+    .projects-controls {
+        align-items: flex-start;
+    }
+
+    .project-info {
+        text-align: left;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .project-meta-row {
+        text-align: left;
+    }
+
+    .project-name,
+    .project-collection,
+    .project-desc {
+        text-align: left;
+    }
+
+
+    /* =========================
+       FEATURED WORK IMAGE BOX
+       Keep image centered inside
+       the existing image frame
+       ========================= */
+
+    .project-photo-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .projects-section .polaroid-frame {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects-section .polaroid-img-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .projects-section .polaroid-img-wrap img {
+        width: auto !important;
+        max-width: 100%;
+        height: 380px;
+        object-fit: contain;
+        object-position: center center;
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+       FOOTER
+       Everything LEFT aligned
+       ========================= */
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    .footer-brand {
+        grid-column: span 1;
+        text-align: left;
+    }
+
+    .footer-brand h3,
+    .footer-brand p {
+        text-align: left;
+    }
+
+    .footer-links-col {
+        text-align: left;
+    }
+
+    .footer-links {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .footer-links a {
+        text-align: left;
+    }
+
+    .footer-contact-details {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+    }
+
+    .footer-bottom-right {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE-ONLY PROFESSIONAL PROJECTS / FEATURED WORK REFINEMENT
+   Desktop remains completely unchanged.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* --------------------------------------------------
+       Featured Work / Projects background
+       Remove the black image-box background on mobile.
+       Match the existing ivory/white section background.
+       -------------------------------------------------- */
+
+    .projects-section {
+        background-color: var(--ivory);
+    }
+
+    .projects-carousel-container {
+        background-color: var(--ivory);
+    }
+
+    .project-card {
+        background-color: var(--ivory);
+    }
+
+    .project-photo-wrap {
+        background-color: var(--ivory);
+        border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .projects-section .polaroid-frame {
+        background-color: var(--ivory) !important;
+    }
+
+    .projects-section .polaroid-img-wrap {
+        background-color: var(--ivory);
+    }
+
+    /* Keep the actual photograph centered in its frame.
+       Any unused area around a portrait image is now ivory,
+       not black. */
+    .projects-section .polaroid-img-wrap img {
+        display: block;
+        width: 100% !important;
+        max-width: 100%;
+        height: 380px;
+        object-fit: contain;
+        object-position: center center;
+        margin: 0 auto;
+        background-color: var(--ivory);
+    }
+
+
+    /* --------------------------------------------------
+       Professional mobile Featured Work heading
+       -------------------------------------------------- */
+
+    .projects-header-grid {
+        position: relative;
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        padding-bottom: 1.4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .projects-header-grid::after {
+        content: '';
+        display: block;
+        width: 58px;
+        height: 1px;
+        background-color: var(--burgundy);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .projects-header-grid h2 {
+        text-align: left;
+        margin-bottom: 0.65rem;
+        line-height: 1.08;
+        letter-spacing: 0.03em;
+    }
+
+    .projects-header-grid p {
+        text-align: left;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+
+    /* --------------------------------------------------
+       Cleaner mobile sorting / controls
+       -------------------------------------------------- */
+
+    .projects-controls {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1.2rem;
+    }
+
+    .projects-sort {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .carousel-arrows {
+        justify-content: flex-start;
+    }
+
+
+    /* --------------------------------------------------
+       Professional project information
+       -------------------------------------------------- */
+
+    .project-info {
+        text-align: left;
+        padding: 0 0.8rem;
+        margin-top: 1.4rem;
+    }
+
+    .project-meta-row {
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .project-name,
+    .project-collection,
+    .project-desc {
+        text-align: left;
+    }
+
+    .project-name {
+        line-height: 1.3;
+    }
+
+    .project-collection {
+        margin-top: 0.35rem;
+    }
+
+    .project-desc {
+        line-height: 1.65;
+    }
+
+
+    /* --------------------------------------------------
+       Subtle professional divider above project details
+       -------------------------------------------------- */
+
+    .project-info::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.08);
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE-ONLY FOUNDER BOTTOM META STACK
+   Desktop remains completely unchanged.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* Stack 02, Brand Introduction / My Story,
+       and Future Classic / Est. 2024 one below another,
+       centered on mobile only */
+    .founder-editorial-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.8rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .founder-editorial-bar .bar-num,
+    .founder-editorial-bar .bar-tag {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE-ONLY FINAL FOOTER + EXPLORATIONS IMAGE ALIGNMENT
+   Desktop remains completely unchanged.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* --------------------------------------------------
+       Footer bottom: CENTER align only this bottom area
+       -------------------------------------------------- */
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .footer-bottom > *,
+    .footer-bottom-right {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    /* --------------------------------------------------
+       Explorations / photo boxes
+       Center each photo inside its own box.
+       No image overflow and no forced cropping.
+       -------------------------------------------------- */
+
+    .mosaic-grid {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .mosaic-item {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--ivory);
+    }
+
+    .mosaic-img-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: var(--ivory);
+    }
+
+    .mosaic-img-container img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center center;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Keep captions inside the image boxes */
+    .mosaic-caption {
+        left: 8px;
+        bottom: 8px;
+    }
+}
